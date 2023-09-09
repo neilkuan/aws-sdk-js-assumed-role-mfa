@@ -178,6 +178,22 @@
         }
       ]
     },
+    "run-sdk-v2": {
+      "name": "run-sdk-v2",
+      "steps": [
+        {
+          "exec": "AWS_SDK_LOAD_CONFIG=1 ts-node src/index-v2.ts"
+        }
+      ]
+    },
+    "run-sdk-v3": {
+      "name": "run-sdk-v3",
+      "steps": [
+        {
+          "exec": "AWS_SDK_LOAD_CONFIG=1 ts-node src/index-v3.ts"
+        }
+      ]
+    },
     "test": {
       "name": "test",
       "description": "Run tests",
@@ -227,13 +243,13 @@
           "exec": "yarn upgrade npm-check-updates"
         },
         {
-          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,npm-check-updates,projen,standard-version,ts-jest,ts-node,typescript"
+          "exec": "npm-check-updates --upgrade --target=minor --peer --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@typescript-eslint/eslint-plugin,@typescript-eslint/parser,eslint-import-resolver-node,eslint-import-resolver-typescript,eslint-plugin-import,eslint,jest,jest-junit,npm-check-updates,projen,standard-version,ts-jest,ts-node,typescript,@aws-sdk/client-s3,@aws-sdk/client-sts,@aws-sdk/credential-providers,@types/promptly,aws-sdk,chalk,promptly"
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit npm-check-updates projen standard-version ts-jest ts-node typescript"
+          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-import-resolver-node eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit npm-check-updates projen standard-version ts-jest ts-node typescript @aws-sdk/client-s3 @aws-sdk/client-sts @aws-sdk/credential-providers @types/promptly aws-sdk chalk promptly"
         },
         {
           "exec": "npx projen"
