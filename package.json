@@ -2,7 +2,6 @@
   "name": "aws-sdk-js-assumed-role-mfa",
   "scripts": {
     "build": "npx projen build",
-    "bump": "npx projen bump",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -12,12 +11,10 @@
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
-    "release": "npx projen release",
     "run-sdk-v2": "npx projen run-sdk-v2",
     "run-sdk-v3": "npx projen run-sdk-v3",
     "test": "npx projen test",
     "test:watch": "npx projen test:watch",
-    "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen"
@@ -35,7 +32,6 @@
     "jest-junit": "^15",
     "npm-check-updates": "^16",
     "projen": "^0.73.12",
-    "standard-version": "^9",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"

@@ -19,6 +19,7 @@ const project = new typescript.TypeScriptProject({
     'aws-sdk-js-v2',
     'mfa',
   ],
+  release: false,
 });
 project.addTask('run-sdk-v2', {
   exec: 'AWS_SDK_LOAD_CONFIG=1 ts-node src/index-v2.ts',
