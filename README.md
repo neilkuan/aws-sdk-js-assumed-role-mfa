@@ -16,8 +16,8 @@ output = json
 
 [profile role-with-mfa]
 role_arn = arn:aws:iam::123456789012:role/the-assumed-role
-source_profile = neil
-mfa_serial = aarn:aws:iam::123456789012:mfa/cli-user
+source_profile = default
+mfa_serial = arn:aws:iam::123456789012:mfa/cli-user
 ```
 
 ## The `trust_relationships` of `the-assumed-role`
